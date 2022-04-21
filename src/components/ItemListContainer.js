@@ -1,8 +1,12 @@
-import '../StylesSheets/NavBarModule.css';
+import '../StylesSheets/ItemListContainerModule.css';
+import ItemCount from './ItemCount';
 
 const ItemListContainer = (prop) => {
     return (
-        <h1>{prop.msg}</h1>
+        <div className='itemListContainer'>
+            <h1>{prop.msg}</h1>
+            <ItemCount/>
+        </div>  
     )
 }
 

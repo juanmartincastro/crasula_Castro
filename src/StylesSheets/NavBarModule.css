@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Estilos del nav bar */
 .nav-bar{
     display: flex;
     height: 70px;
@@ -56,10 +55,4 @@
     font-size: 22px;
     color: #fff;
     
-}
-
-/* Estilos del ItemListContainer */
-
-h1 {
-    border: 1px solid black;
 }
