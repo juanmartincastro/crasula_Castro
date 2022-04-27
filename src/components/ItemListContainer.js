@@ -1,11 +1,12 @@
 import '../StylesSheets/ItemListContainerModule.css';
 import ItemCount from './ItemCount';
+import ItemList from './ItemList'
 
 const ItemListContainer = (prop) => {
     return (
         <div className='itemListContainer'>
-            <h1>{prop.msg}</h1>
-            <ItemCount/>
+            <h1>{prop.message}</h1>
+            <ItemList/>
         </div>  
     )
 }

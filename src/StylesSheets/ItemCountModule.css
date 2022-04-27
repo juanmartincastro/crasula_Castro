@@ -1,12 +1,12 @@
 .itemCount {
-    width: 8%;
-    margin-left: 50px;
-    border: 1px solid rgb(36, 115, 213);
+    width: 95%;
+    margin: 0px auto;
 }
+
 .itemCountButtonsContainer{
     border: 1px solid lightskyblue;
     border-radius: 5px;
-    width: 90%;
+    width: 100%;
     margin: 10px auto;
     display: flex;
     justify-content: space-between;
@@ -26,13 +26,16 @@
 }
 
 .addButtonCart{
-    width: 90%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     background-color: rgb(20, 119, 195);
+    background-color: rgb(230, 156, 72);
+    /* background-color: rgb(67, 165, 218); */
     color:white;
     font-weight: 700;
     border: 2px solid rgb(67, 165, 218);
+    border: 2px solid rgb(245, 157, 55);
     border-radius: 5px;
     cursor: pointer;
 }
