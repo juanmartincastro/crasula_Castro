@@ -4,14 +4,14 @@ import { useState } from "react";
 
 const ItemCount = () => {
 
-    const [count, setAdd] = useState(0)
+    const [count, setAdd] = useState(1)
 
     const addHandler = () => {
         setAdd(count + 1)
     }
 
     const deductHandler = () => {
-        if (count > 0){
+        if (count > 1){
             setAdd(count - 1)
         }   
     }

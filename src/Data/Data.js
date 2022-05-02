@@ -2,7 +2,8 @@ export const plantsData = [
     {
     id:1, 
     title:'Crassula perforata', 
-    description:'La crassula perforata es una planta suculenta nativa de Sudáfrica. En su hábitat natural suele crecer a través y sobre otros arbustos.Es una planta suculenta con un aspecto realmente curioso. Las hojas crecen apiladas alrededor del tallo de tal forma que este las perfora (de ahí su nombre, perforata).', 
+    description:'La crassula perforata es una planta suculenta nativa de Sudáfrica. En su hábitat natural suele crecer a través y sobre otros arbustos. Es una planta con un aspecto realmente curioso. Las hojas crecen apiladas alrededor del tallo de tal forma que este las perfora (de ahí su nombre, perforata).', 
+    detail:'Es una planta resistente acostumbrada a climas secos y calurosos, incluso puede soportar cortas temporadas de temperaturas bajo cero. Lo realmente importante es que durante el invierno esté en un ambiente seco porque de lo contrario se pudre con facilidad. Para que tu crassula perforata crezca sana durante mucho tiempo, ten en cuenta lo siguiente: El riego ligero sin encharcar. El sustrato siempre debe secar completamente antes de volver a regar. Muy poco riego en invierno. Un exceso de humedad provoca que la planta se pudra, sobre todo en las estaciones frías. Requiere mucha luz, al menos 6/8 horas al día.',
     price:520, 
     pictureUrl:'https://clubsuculentas.com/wp-content/uploads/2019/08/crassula-perforata-variegata.jpg'
     },

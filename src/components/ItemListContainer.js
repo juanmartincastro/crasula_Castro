@@ -1,3 +1,4 @@
+import React from 'react';
 import '../StylesSheets/ItemListContainerModule.css';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList'

@@ -5,7 +5,7 @@ import '../StylesSheets/ItemCardModule.css';
 
 const ItemCard = (props) => {
 
-    const {title, description, price, pictureUrl} = props.ItemList 
+    const {title, description, price, pictureUrl} = props.ItemProps 
 
     return (
         <div className='itemCardContainer'>
