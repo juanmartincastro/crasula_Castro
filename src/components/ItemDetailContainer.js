@@ -12,20 +12,18 @@ const ItemDetailContainer = () => {
 
     const getItem = () => {
         const getSelfApiPromise = new Promise ((resolve) =>{
-            // setTimeout(() => {
-            //     resolve(plantsData)
-            // }, 1500);
-            resolve(plantsData)
+            setTimeout(() => {
+                resolve(plantsData)
+            },2000);
         })
-        getSelfApiPromise.then( data => {
+        getSelfApiPromise.then(data => {
             setItemContainer(data)
-            console.log(data)
         })
     }
     
     return (
         <div className="itemDetailContainer">
-            {itemContainer.filter(i => i.id === 1).map( item => <ItemDetail key={item.id} productDetail={item}/>)}
+            {itemContainer.filter(i => i.id === 1).map( i => <ItemDetail key={i.id} productDetail={i}/>)}
         </div>
     )
 
