@@ -9,14 +9,18 @@
     height: 70px;
 }
 
-.nombreLogo{
+.nombreLogo {
     padding-left: 30px;
     padding-right: 30px;
     background-color: black;
-    color:#fff;
     font-size: 32px;
     height: 70px;
     line-height: 70px;
+}
+
+.nombreLogo > a {
+    text-decoration: none;
+    color: white;
 }
 
 .Imagen-crasula{

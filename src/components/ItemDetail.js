@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../StylesSheets/ItemDetailModule.css'
 import ItemCount from "./ItemCount";
 import {AiOutlineHeart} from 'react-icons/ai';
@@ -28,12 +28,12 @@ const ItemDetail = (props) => {
                     </div>
 
                     <ItemCount />
+                    
                 </div>
             </div>
          
         </div>
     )
-
 }
 
 export default ItemDetail
