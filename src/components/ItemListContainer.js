@@ -8,21 +8,6 @@ import { plantsData } from '../Data/Data';
 import ItemCard from './ItemCard';
 
 const ItemListContainer = (prop) => {
-    // const {plantaId} = useParams()
-   
-    // const [planta, setPlanta] = useState({})
-  
-    // useEffect(() => {
-    //     setPlanta(plantsData.find( p => p.id == plantaId))
-    // }, [plantaId])
-
-    
-    // return (
-    //     <div className='itemListContainer'>
-            
-    //         <ItemList/>
-    //     </div>
-    // )
 
     const [itemList, setItemList] = useState([])
 

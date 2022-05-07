@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import '../StylesSheets/ItemDetailModule.css'
 import ItemCount from "./ItemCount";
 import {AiOutlineHeart} from 'react-icons/ai';
@@ -6,13 +6,6 @@ import {AiOutlineHeart} from 'react-icons/ai';
 const ItemDetail = (props) => {
 
     const {title, description, detail, price, pictureUrl} = props.productDetail
-
-    const [finishBuy,setFinishBuy] = useState(false)
-
-    const onAdd = (count) => {
-        setFinishBuy(true)
-        console.log(count)
-    }
 
     return (
         <div className='itemDetailContainer'>
@@ -33,19 +26,7 @@ const ItemDetail = (props) => {
                         <p >{description}</p>
                         <p>{detail}</p>
                     </div>
-
-                    {finishBuy ? (
-                        <div>
-                            <button className='addButtonCart'>
-                                Terminar compra
-                            </button>
-                        </div>
-                    )
-                    : (
-                    <ItemCount onAdd={onAdd}/>)
-                    }
-
-                    
+             
                 </div>
             </div>
          

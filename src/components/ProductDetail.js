@@ -16,6 +16,13 @@ const ProductDetail = () => {
         setPlanta(plantsData.find( p => p.id == plantaId))
     }, [plantaId])
 
+    const [finishBuy,setFinishBuy] = useState(false)
+
+    const onAdd = (count) => {
+        setFinishBuy(true)
+        console.log(count)
+    }
+
     return(
         <>
         <div className='itemDetailContainer'>
@@ -37,7 +44,16 @@ const ProductDetail = () => {
                         <p>{planta.detail}</p>
                     </div>
 
-                    <ItemCount />
+                    {finishBuy ? (
+                        
+                        <button className='addButtonCart'>
+                            Terminar compra
+                        </button>
+                    
+                    ) : (
+                    <ItemCount onAdd={onAdd}/>
+                    )}
+                    
                     
                 </div>
             </div>
