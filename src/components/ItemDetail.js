@@ -7,6 +7,13 @@ const ItemDetail = (props) => {
 
     const {title, description, detail, price, pictureUrl} = props.productDetail
 
+    const [finishBuy,setFinishBuy] = useState(false)
+
+    const onAdd = (count) => {
+        setFinishBuy(true)
+        console.log(count)
+    }
+
     return (
         <div className='itemDetailContainer'>
             <div className='itemDetail'>
@@ -27,7 +34,17 @@ const ItemDetail = (props) => {
                         <p>{detail}</p>
                     </div>
 
-                    <ItemCount />
+                    {finishBuy ? (
+                        <div>
+                            <button className='addButtonCart'>
+                                Terminar compra
+                            </button>
+                        </div>
+                    )
+                    : (
+                    <ItemCount onAdd={onAdd}/>)
+                    }
+
                     
                 </div>
             </div>

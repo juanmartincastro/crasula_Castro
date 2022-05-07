@@ -3,7 +3,7 @@ import '../StylesSheets/ItemCountModule.css';
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 
-const ItemCount = () => {
+const ItemCount = (onAdd) => {
 
     const [count, setAdd] = useState(1)
 
@@ -26,7 +26,7 @@ const ItemCount = () => {
         </div>
 
         <div>
-            <button className='addButtonCart'>Agregar al carrito</button>
+            <button className='addButtonCart' onClick = {() => onAdd(count)}>Agregar al carrito</button>
         </div>
     </div>
   )

@@ -75,3 +75,16 @@
     padding: 10px;
     text-align: justify;
 }
+
+.addButtonCart{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(247, 159, 59);
+    color:white;
+    font-weight: 700;
+    border: 2px solid rgb(67, 165, 218);
+    border: 2px solid rgb(245, 157, 55);
+    border-radius: 5px;
+    cursor: pointer;
+}
