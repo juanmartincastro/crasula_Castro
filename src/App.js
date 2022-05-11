@@ -1,32 +1,35 @@
-import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import {BrowserRouter, Route, Routes } from 'react-router-dom';
-import ItemCount from './components/ItemCount';
-import ProductDetail from './components/ProductDetail';
-import ItemDetailContainer from './components/ItemDetailContainer';
-
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import "./App.css"
+import AppContextProvider from "./components/context/AppContext"
+import CartContextProvider from "./components/context/CartContext"
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+import NavBar from "./components/NavBar/NavBar"
 
 function App() {
-  return (
-    <div className='App'>
-
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<ItemListContainer />} />
-          <Route path='/contador' element={<ItemCount />} />
-          <Route path='/planta/:plantaId' element={<ProductDetail />} />
-          <Route></Route>
-        </Routes>
-      </BrowserRouter>
-
-      {/* <ItemListContainer 
-      message='ItemListContainer' 
-      /> */}
-      {/* <ItemDetailContainer /> */}
-    </div>
-  );
+	return (
+		<>
+			<AppContextProvider>
+				<CartContextProvider>
+					<BrowserRouter>
+						<NavBar />
+						<Routes>
+							<Route
+								path="/"
+								element={<ItemListContainer headings={"Crassula"} />}
+							/>
+							<Route
+								path="/category/:categoryId"
+								element={<ItemListContainer headings={"Crassula"} />}
+							/>
+							<Route path="/item/:id" element={<ItemDetailContainer />} />
+							{/* <Route path="/cart" element={<Cart />} /> */}
+						</Routes>
+					</BrowserRouter>
+				</CartContextProvider>
+			</AppContextProvider>
+		</>
+	)
 }
 
-export default App;
+export default App

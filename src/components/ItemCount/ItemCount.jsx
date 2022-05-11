@@ -5,7 +5,7 @@ import { useCartContext } from "../context/CartContext"
 const ItemCount = ({ stock, onAdd, id }) => {
 	const [count, setCount] = useState(0)
 
-	const { addToCart } = useCartContext()
+	const { addItem } = useCartContext()
 	const { products } = useAppContext()
 
 	const handleAdd = () => {
@@ -27,7 +27,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
 			return
 		}
 
-		addToCart(findProduct, cantidad)
+		addItem(findProduct, cantidad)
 		onAdd(count)
 	}
 
@@ -45,7 +45,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
 				</div>
 				<div>
 					<button
-						className="btn bg-primary text-white btn-block "
+						className="btn bg-red-900 hover:bg-orange-700 text-white btn-block "
 						onClick={() => handleClick(id, count)}
 					>
 						Agregar al Carrito

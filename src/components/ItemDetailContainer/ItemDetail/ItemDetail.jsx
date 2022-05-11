@@ -33,7 +33,7 @@ const ItemDetail = ({ producto }) => {
 							{terminar ? (
 								<Link
 									to="/cart"
-									className="btn bg-primary text-white btn-block "
+									className="btn bg-zinc-600 mt-5 text-white btn-block "
 								>
 									Terminar Compra
 								</Link>
