@@ -1,8 +1,0 @@
-.ItemList {
-    width: 98%;
-    border: 2px solid rgb(168, 97, 160);
-    height: auto;
-    margin: 50px auto;
-    display: flex;
-    justify-content: space-evenly; 
-}

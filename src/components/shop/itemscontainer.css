@@ -1,0 +1,25 @@
+.banner{
+    height: 30vh;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+       ),  url(https://www.inforegion.com.ar/wp-content/uploads/2021/08/suculentas1200.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-1{
+    display: flex;
+    
+    justify-content: center;
+}
+.banner-1 h2{
+    font-size: 4rem;
+    font-weight: bold;    
+    color: white;   
+    text-transform: uppercase; 
+}

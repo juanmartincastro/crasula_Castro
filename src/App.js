@@ -1,35 +1,42 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import "./App.css"
-import AppContextProvider from "./components/context/AppContext"
-import CartContextProvider from "./components/context/CartContext"
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
-import NavBar from "./components/NavBar/NavBar"
+import './App.css';
+import { BrowserRouter as Router, Switch ,Route } from 'react-router-dom'
+import { ItemListContainer } from './components/shop/ItemListContainer';
+import { NavBar } from './components/navbar/NavBar';
+import { ItemDetailContainer } from './components/shop/ItemDetailContainer/ItemDetailContainer';
+import {Cart}  from './components/shop/Cart/Cart';
+import CartContextProvider from './components/context/CartContext/CartContext';
+import AppContextProvider from './components/context/AppContext/AppContext';
 
 function App() {
-	return (
-		<>
-			<AppContextProvider>
-				<CartContextProvider>
-					<BrowserRouter>
-						<NavBar />
-						<Routes>
-							<Route
-								path="/"
-								element={<ItemListContainer headings={"Crassula"} />}
-							/>
-							<Route
-								path="/category/:categoryId"
-								element={<ItemListContainer headings={"Crassula"} />}
-							/>
-							<Route path="/item/:id" element={<ItemDetailContainer />} />
-							{/* <Route path="/cart" element={<Cart />} /> */}
-						</Routes>
-					</BrowserRouter>
-				</CartContextProvider>
-			</AppContextProvider>
-		</>
-	)
+
+  return (
+      <AppContextProvider>
+        <CartContextProvider>
+          <Router>
+            <Switch>
+                <>
+                  <NavBar/>
+
+                    <Route exact path="/">
+                      <ItemListContainer greetings=" Planta, riega y sonrie..."/>
+                    </Route>
+                    <Route exact path="/category/:categoryId">
+                      <ItemListContainer greetings="Planta, riega y sonrie..."/>
+                    </Route>
+                    <Route exact path="/cart">
+                      <Cart/>
+                    </Route>
+
+                    <Route exact path="/item/:itemId" >
+                        <ItemDetailContainer/>
+                    </Route>
+                </>
+            </Switch>
+          </Router>
+        </CartContextProvider>
+
+      </AppContextProvider>
+  )
 }
 
-export default App
+export default App;
